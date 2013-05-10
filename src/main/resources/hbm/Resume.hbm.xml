@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.blog.cavalr.hibernate.Resume" table="resume">
+        <id name="resumeId" type="java.lang.Long">
+            <column name="resume_id" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" not-null="false" />
+        </property>
+
+        <many-to-one name="address" class="com.blog.cavalr.hibernate.Address" fetch="select" lazy="false" cascade="all">
+            <column name="address_id" />
+        </many-to-one>
+
+    </class>
+</hibernate-mapping>
