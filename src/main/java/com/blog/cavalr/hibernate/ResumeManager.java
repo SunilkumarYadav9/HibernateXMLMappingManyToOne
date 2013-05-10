@@ -26,7 +26,7 @@ public class ResumeManager {
         assert fromDB != null;
 
         /* delete resume */
-        resumeDao.deleteUser(fromDB);
+        resumeDao.deleteResume(fromDB);
 
     }
 }

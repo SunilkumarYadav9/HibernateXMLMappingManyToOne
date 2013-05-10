@@ -25,7 +25,7 @@ public class ResumeDao {
         return (Resume) sessionFactory.openSession().get(Resume.class, resumeId);
     }
 
-    public void deleteUser(Resume resume) {
+    public void deleteResume(Resume resume) {
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
